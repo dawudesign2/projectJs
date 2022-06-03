@@ -1,7 +1,7 @@
 class ElementHtml {
     /*
     * @param {string} tagName
-    * @param {array} children
+    * @param {array} option
     * @return {object}
     */
     createElement(tagName, parent = null, options = []) {
