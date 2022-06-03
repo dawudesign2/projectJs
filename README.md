@@ -1,3 +1,3 @@
-# Class Js 
+# Projet Js 
 
-creation of a class that creates Html tags on the fly by dawudesign :)
+Develop by **Dawudesign** 
