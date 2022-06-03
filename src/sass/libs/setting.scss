@@ -1,0 +1,30 @@
+$mobile: size(640);
+$desktop: size(1440);
+$tablet: size(800);
+/* Neutral */
+$base-size: 15;
+//Function to convert px value into rem
+//You can replace rem with any other value you want (rem is most preferred value for web)
+@function size($target, $context: $base-size) {
+  @return calc($target / $context) * 1rem;
+}
+
+$font:'Overpass', sans-serif;
+
+@mixin responsive($media) {
+  @if $media == mobile {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  } @else {
+    @error "the device argument can only be valid for mobile, smartphone, tablet or descktop.";
+  }
+}

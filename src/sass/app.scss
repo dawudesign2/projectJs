@@ -1,0 +1,40 @@
+@import '../sass/libs/reset.scss';
+@import '../sass/libs/setting.scss';
+
+$dark: #0e0e0e;
+$greenDark:#012e40;
+$greenDarkTwo:#015050;
+$greenOne: #017172;
+$greenTwo: #017e82;
+$greenThree: #019697;
+$orange: #f28705;
+
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+        font-size: size(18);
+        Font-weight: bold;
+        text-decoration: none;
+        padding:size(12);
+        color: $greenDark;
+        transition: all ease-in-out 0.6s;
+        &:hover {
+            color: $greenTwo;
+        }
+    }
+}
+.logo {
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+}
