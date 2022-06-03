@@ -1,6 +1,3 @@
-$mobile: size(640);
-$desktop: size(1440);
-$tablet: size(800);
 /* Neutral */
 $base-size: 15;
 //Function to convert px value into rem
@@ -9,22 +6,21 @@ $base-size: 15;
   @return calc($target / $context) * 1rem;
 }
 
-$font:'Overpass', sans-serif;
 
-@mixin responsive($media) {
-  @if $media == mobile {
-    @media (max-width: $mobile) {
-      @content;
-    }
-  } @else if $media == tablet {
-    @media (max-width: $tablet) {
-      @content;
-    }
-  } @else if $media == desktop {
-    @media (max-width: $desktop) {
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
+
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
-    @error "the device argument can only be valid for mobile, smartphone, tablet or descktop.";
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }

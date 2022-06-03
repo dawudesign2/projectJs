@@ -9,7 +9,18 @@ const header =  () => {
     elm.createElement('a', 'nav', [{className:"nav-link", href:"#", textContent:"Contact"}]);
 
     elm.createElement("div","header",[{className:"logo"}]);
-    elm.createElement("img", "div", [{className:"logo-img", src:"src/img/D2.png" , alt:"logo"}]);
+    elm.createElement("img", ".logo", [{className:"logo-img", src:"src/img/D2.png" , alt:"logo"}]);
+
+    elm.createElement("div","body",[{className:"header-content"}]);
+    elm.createElement("div",".header-content",[{className:"container"}]);
+    elm.createElement("h1",".container",[
+        {
+            className:"header-title", 
+            textContent:"Helping people enhance their projects with quality software."
+        }
+    ]);
+    //elm.createElement("img",".container",[{className:"header-img", src:"src/img/dws.png" , alt:"logo"}]);
+
 }
 
 export default header;

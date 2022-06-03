@@ -1,6 +1,7 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -59,17 +60,23 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* Neutral */
+body {
+  background: linear-gradient(#0e0e0e, #012e40) no-repeat center center fixed;
+  font-family: "Roboto";
+}
+
 .header {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  z-index: 1;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
 }
 .nav a {
@@ -77,16 +84,45 @@ p, h1, h2, h3, h4, h5, h6 {
   Font-weight: bold;
   text-decoration: none;
   padding: 0.8rem;
-  color: #012e40;
+  color: #019697;
   transition: all ease-in-out 0.6s;
 }
 .nav a:hover {
-  color: #017e82;
+  color: #f28705;
 }
 
+.logo {
+  display: flex;
+  margin-left: 4rem;
+}
 .logo .logo-img {
   width: 100px;
   height: 100px;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 767px) {
+  .header-content .container {
+    flex-direction: row;
+  }
+}
+.header-content .container .header-title {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #019697;
+  inline-size: 24rem;
+  overflow-wrap: break-word;
 }
 
 /*# sourceMappingURL=app.css.map */

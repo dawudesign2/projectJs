@@ -1,40 +1,78 @@
 @import '../sass/libs/reset.scss';
 @import '../sass/libs/setting.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+$roboto: 'Roboto';
 
 $dark: #0e0e0e;
-$greenDark:#012e40;
-$greenDarkTwo:#015050;
+$greenDark: #012e40;
+$greenDarkTwo: #015050;
 $greenOne: #017172;
 $greenTwo: #017e82;
 $greenThree: #019697;
 $orange: #f28705;
 
+body {
+    background: linear-gradient($dark, $greenDark) no-repeat center center fixed;
+    font-family: $roboto;
+}
+
 .header {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content:flex-end;
     align-items: center;
+    z-index: 1;
 }
+
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
     a {
         font-size: size(18);
         Font-weight: bold;
         text-decoration: none;
-        padding:size(12);
-        color: $greenDark;
+        padding: size(12);
+        color: $greenThree;
         transition: all ease-in-out 0.6s;
+
         &:hover {
-            color: $greenTwo;
+            color: $orange;
         }
     }
 }
+
 .logo {
+    display: flex;
+    margin-left: size(60);
     .logo-img {
         width: 100px;
         height: 100px;
     }
 }
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @include respond-to('small'){
+            flex-direction: row;
+        }
+        .header-title {
+            font-size: size(39);
+            font-weight: 300;
+            color: $greenThree;
+            inline-size: size(360);
+            overflow-wrap: break-word;
+        }
+    }
+}
+
