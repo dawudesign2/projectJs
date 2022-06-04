@@ -73,13 +73,12 @@ body {
   align-items: center;
   z-index: 1;
 }
-
-.nav {
+.header .nav {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.nav a {
+.header .nav a {
   font-size: 1.2rem;
   Font-weight: bold;
   text-decoration: none;
@@ -87,15 +86,14 @@ body {
   color: #019697;
   transition: all ease-in-out 0.6s;
 }
-.nav a:hover {
+.header .nav a:hover {
   color: #f28705;
 }
-
-.logo {
+.header .logo {
   display: flex;
   margin-left: 4rem;
 }
-.logo .logo-img {
+.header .logo .logo-img {
   width: 100px;
   height: 100px;
 }
@@ -103,33 +101,40 @@ body {
 .header-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
-.header-content .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (min-width: 767px) {
-  .header-content .container {
-    flex-direction: row;
+@media (min-width: 992px) {
+  .header-content {
+    justify-content: space-between;
   }
 }
-.header-content .container .header-title {
+.header-content .container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem 0rem 0rem 0rem;
+}
+@media (min-width: 992px) {
+  .header-content .container-left {
+    margin: 8rem;
+  }
+}
+.header-content .container-left .header-title {
   font-size: 2.6rem;
   font-weight: 300;
   color: #019697;
   inline-size: 24rem;
   overflow-wrap: break-word;
+  margin-left: 2.4rem;
 }
-.header-content .container .header-text {
+.header-content .container-left .header-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
-.header-content .container .header-text .nav-text {
+.header-content .container-left .header-text .nav-text {
   font-size: 1.4rem;
   text-decoration: none;
   border: solid 1px #019697;
@@ -138,18 +143,21 @@ body {
   padding: 1rem;
   margin: 0.8rem;
 }
-.header-content .container .header-text .one:hover {
+.header-content .container-left .header-text .one:hover {
   border-color: #f28705;
   color: #f28705;
 }
-.header-content .container .header-text .two {
+.header-content .container-left .header-text .two {
   background-color: #019697;
   border: none;
   color: #fff;
   transition: all ease-in-out 0.6s;
 }
-.header-content .container .header-text .two:hover {
+.header-content .container-left .header-text .two:hover {
   background-color: #f28705;
+}
+.header-content .container-right {
+  display: flex;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -24,47 +24,49 @@ body {
     justify-content:flex-end;
     align-items: center;
     z-index: 1;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    a {
-        font-size: size(18);
-        Font-weight: bold;
-        text-decoration: none;
-        padding: size(12);
-        color: $greenThree;
-        transition: all ease-in-out 0.6s;
-
-        &:hover {
-            color: $orange;
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        a {
+            font-size: size(18);
+            Font-weight: bold;
+            text-decoration: none;
+            padding: size(12);
+            color: $greenThree;
+            transition: all ease-in-out 0.6s;
+    
+            &:hover {
+                color: $orange;
+            }
         }
     }
-}
-
-.logo {
-    display: flex;
-    margin-left: size(60);
-    .logo-img {
-        width: 100px;
-        height: 100px;
+    .logo {
+        display: flex;
+        margin-left: size(60);
+        .logo-img {
+            width: 100px;
+            height: 100px;
+        }
     }
 }
 
 .header-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    .container {
+    @include respond-to('medium') {
+        justify-content: space-between;
+    }
+    .container-left {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        @include respond-to('small'){
-            flex-direction: row;
+        margin: size(120) size(0) size(0) size(0);
+        @include respond-to('medium') {
+            margin: size(120);
         }
         .header-title {
             font-size: size(39);
@@ -72,10 +74,11 @@ body {
             color: $greenThree;
             inline-size: size(360);
             overflow-wrap: break-word;
+            margin-left: size(36);
         }
         .header-text{
             display:flex;
-            flex-direction: column;
+            flex-direction:row;
             align-items: center;
             .nav-text {
                 font-size: size(21);
@@ -103,6 +106,9 @@ body {
                 }
             }
         }
+    }
+    .container-right {
+        display: flex;
     }
 }
 
