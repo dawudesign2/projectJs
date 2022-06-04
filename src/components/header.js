@@ -20,6 +20,9 @@ const header =  () => {
         }
     ]);
     //elm.createElement("img",".container",[{className:"header-img", src:"src/img/dws.png" , alt:"logo"}]);
+    elm.createElement("div",".container",[{className:"header-text"}]);
+    elm.createElement('a', '.header-text', [{className:"nav-text one", href:"#", textContent:"Contact us"}]);
+    elm.createElement('a', '.header-text', [{className:"nav-text two", href:"#", textContent:"Your project here"}]);
 
 }
 

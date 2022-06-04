@@ -124,5 +124,32 @@ body {
   inline-size: 24rem;
   overflow-wrap: break-word;
 }
+.header-content .container .header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-content .container .header-text .nav-text {
+  font-size: 1.4rem;
+  text-decoration: none;
+  border: solid 1px #019697;
+  color: #019697;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 0.8rem;
+}
+.header-content .container .header-text .one:hover {
+  border-color: #f28705;
+  color: #f28705;
+}
+.header-content .container .header-text .two {
+  background-color: #019697;
+  border: none;
+  color: #fff;
+  transition: all ease-in-out 0.6s;
+}
+.header-content .container .header-text .two:hover {
+  background-color: #f28705;
+}
 
 /*# sourceMappingURL=app.css.map */
