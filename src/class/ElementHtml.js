@@ -17,6 +17,7 @@ class ElementHtml {
             option && option.value && (element.value = option.value);
             option && option.placeholder && (element.placeholder = option.placeholder);
             option && option.textContent && (element.textContent = option.textContent);
+            option && option.innerHTML && (element.innerHTML = option.innerHTML);
             option && option.style && (element.style = option.style);
         });
         parent ? document.querySelector(parent).appendChild(element) : document.body.appendChild(element); // add element in the DOM

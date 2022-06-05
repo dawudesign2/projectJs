@@ -1,5 +1,6 @@
 @import '../sass/libs/reset.scss';
 @import '../sass/libs/setting.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 
 $roboto: 'Roboto';
@@ -174,6 +175,39 @@ body {
                     height: auto;
                 }
             }
+        }
+    }
+}
+
+.about {
+    margin-top: size(120);
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .about-text {
+            .about-title {
+                font-size: size(39);
+                font-weight: 300;
+                color: $greenThree;
+                inline-size: size(360);
+                overflow-wrap: break-word;
+                line-height: size(42);
+                span {
+                    font-weight: 100;
+                    color: $orange;
+                }
+            }
+            .about-text-p {
+                margin-top: size(12);
+                color: $greenTwo;
+                font-size: size(21);
+                inline-size: size(360);
+                overflow-wrap: break-word;
+            }
+        }
+        .about-boxes {
+            
         }
     }
 }

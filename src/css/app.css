@@ -229,4 +229,32 @@ body {
   height: auto;
 }
 
+.about {
+  margin-top: 8rem;
+}
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.about .about-content .about-text .about-title {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #019697;
+  inline-size: 24rem;
+  overflow-wrap: break-word;
+  line-height: 2.8rem;
+}
+.about .about-content .about-text .about-title span {
+  font-weight: 100;
+  color: #f28705;
+}
+.about .about-content .about-text .about-text-p {
+  margin-top: 0.8rem;
+  color: #017e82;
+  font-size: 1.4rem;
+  inline-size: 24rem;
+  overflow-wrap: break-word;
+}
+
 /*# sourceMappingURL=app.css.map */
