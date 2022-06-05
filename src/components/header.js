@@ -1,4 +1,6 @@
 import Element from "../class/ElementHtml.js";
+import carousel from "../components/carousel.js";
+
 
 const header =  () => { 
     const elm = new Element();
@@ -25,8 +27,28 @@ const header =  () => {
     elm.createElement('a', '.header-text', [{className:"nav-text two", href:"#", textContent:"Your project here"}]);
 
     elm.createElement("div",".header-content",[{className:"container-right"}]);
-    elm.createElement("canvas",".container-right",[{className:"header-canvas"}]);
+    elm.createElement("div",".container-right",[{className:"carousel"}]);
+    elm.createElement("div",".carousel",[{className:"slides"}]);
+
+    fetch("src/data/imgSlide.json")
+    .then((res) => res.json())
+    .then((json) => {
+        json.forEach((item) => {
+            elm.createElement("img",".slides",[{className:"slide", src:item.url, alt:item.title}]);
+        });
+    }).catch((err) => {
+        console.log(err);
+    });
+
+
+    elm.createElement("div",".carousel",[{className:"controls"}]);
+    elm.createElement("div",".controls",[{className:"control control-prev", textContent: '<'}]);
+    elm.createElement("div",".controls",[{className:"control control-next", textContent: '>'}]);
+
+    carousel();
 
 }
 
 export default header;
+
+
