@@ -1,15 +1,15 @@
 const carousel = () => {
     const delay = 3000;
-    const slides = document.querySelector(".slides");
-    const count = slides.childElementCount;
-    const maxLeft = (count - 1) * 100 * -1;
+    const slides = document.querySelector("#slides");
+    const slide = 3;
+    const maxLeft = (slide - 1) * 100 * -1;
 
     let current = 0;
     const changeSlide = (next = true) => {
-        if(next) {
+        if (next) {
             current += current > maxLeft ? -100 : current * -1;
         } else {
-            current -= current < 0 ? current + 100 : maxLeft;
+            current = current < 0 ? current + 100 : maxLeft;
         }
         slides.style.left = current + "%";
     }

@@ -1,0 +1,14 @@
+[
+    {
+        "src": "src/img/pexels-markus-spiske.jpg", 
+        "alt": "pexels-markus-spiske"
+    }, 
+    {
+        "src": "src/img/pexels-pixabay.jpg",
+        "alt": "pexels-pixabay"
+    },
+    {
+        "src": "src/img/pexels-sora-shimazaki.jpg",
+        "alt": "pexels-sora-shimazaki"
+    }
+]

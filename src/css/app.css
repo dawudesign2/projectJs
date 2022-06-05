@@ -104,7 +104,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1.3333333333rem;
 }
 @media (min-width: 992px) {
   .header-content {
@@ -123,12 +122,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2.8rem;
-}
-@media (min-width: 992px) {
-  .header-content .container-left {
-    margin: 8rem;
-  }
+  margin-top: 8rem;
 }
 .header-content .container-left .header-title {
   font-size: 2.6rem;
@@ -170,22 +164,23 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0rem auto;
+  margin-top: 8rem;
 }
 .header-content .container-right .carousel {
   position: relative;
-  width: 28rem;
+  width: 100%;
+  min-width: 28rem;
   height: 24rem;
   overflow: hidden;
 }
 @media (min-width: 992px) {
   .header-content .container-right .carousel {
-    width: 28rem;
+    min-width: 28rem;
   }
 }
 @media (min-width: 1200px) {
   .header-content .container-right .carousel {
-    width: 40rem;
+    min-width: 40rem;
   }
 }
 .header-content .container-right .carousel:hover .controls {

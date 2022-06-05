@@ -28,19 +28,17 @@ const header =  () => {
 
     elm.createElement("div",".header-content",[{className:"container-right"}]);
     elm.createElement("div",".container-right",[{className:"carousel"}]);
-    elm.createElement("div",".carousel",[{className:"slides"}]);
-
-    fetch("src/data/imgSlide.json")
-    .then((res) => res.json())
-    .then((json) => {
-        json.forEach((item) => {
-            elm.createElement("img",".slides",[{className:"slide", src:item.url, alt:item.title}]);
+    elm.createElement("div",".carousel",[{className:"slides", id:"slides"}]);
+    fetch("../src/data/carousel.json")
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(element => {
+            elm.createElement("img",".slides",[
+                {className:"slide", src:element.src, alt:element.alt},
+            ]);
         });
-    }).catch((err) => {
-        console.log(err);
     });
-
-
+    
     elm.createElement("div",".carousel",[{className:"controls"}]);
     elm.createElement("div",".controls",[{className:"control control-prev", textContent: '<'}]);
     elm.createElement("div",".controls",[{className:"control control-next", textContent: '>'}]);
