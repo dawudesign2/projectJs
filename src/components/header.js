@@ -29,7 +29,7 @@ const header =  () => {
     elm.createElement("div",".header-content",[{className:"container-right"}]);
     elm.createElement("div",".container-right",[{className:"carousel"}]);
     elm.createElement("div",".carousel",[{className:"slides", id:"slides"}]);
-    fetch("https://raw.githubusercontent.com/dawudesign2/projectJs/main/src/data/carousel.json")
+    fetch("../src/data/carousel.json").url()
     .then(response => response.json())
     .then(data => {
         data.forEach(element => {
